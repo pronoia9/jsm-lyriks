@@ -27,9 +27,7 @@ const Discover = () => {
 
       <div className='flex flex-wrap sm:justify-start justify-center gap-8'>
         {data?.map((song, i) => {
-          const { layout, type, key, title, subtitle, share, images, hub, artists, url, highlightsurls, properties } =
-            song;
-          return <SongCard key={key} song={title} i={i} />;
+          return <SongCard key={song.key} song={song} i={i} />;
         })}
       </div>
     </div>
