@@ -13,9 +13,9 @@ const links = [
   { name: 'Top Charts', to: '/top-charts', icon: HiOutlineHashtag },
 ];
 
-const NavLinks = () => (
+const NavLinks = ({ handleClick }) => (
   <div className='mt-10'>
-    {links.map((item, i) => (
+    {links.map((item) => (
       <NavLink
         key={item.name}
         to={item.to}

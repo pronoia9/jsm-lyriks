@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
@@ -25,7 +24,6 @@ const SongCard = ({ song, activeSong, isPlaying, data, i }) => {
           className={`absolute inset-0 justify-center items-center bg-black bg-opacity-50 group-hover:flex ${
             activeSong && activeSong.title === title ? 'flex bg-black bg-opacity-70' : 'hidden'
           }`}>
-          {/* Play/pause */}
           <PlayPause
             isPlaying={isPlaying}
             activeSong={activeSong}
@@ -34,10 +32,9 @@ const SongCard = ({ song, activeSong, isPlaying, data, i }) => {
             handlePlay={handlePlayClick}
           />
         </div>
-        <img alt='song_img' src={images?.coverart} />
+        <img alt='song_img' src={images?.coverart} className='w-full h-full rounded-lg' />
       </div>
 
-      {/* Song info */}
       <div className='mt-4 flex flex-col'>
         <p className='font-semibold text-lg text-white truncate'>
           <Link to={`/songs/${key}`}>{title}</Link>
