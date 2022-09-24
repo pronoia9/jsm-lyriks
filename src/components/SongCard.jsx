@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
@@ -33,7 +32,7 @@ const SongCard = ({ song, activeSong, isPlaying, data, i }) => {
             handlePlay={handlePlayClick}
           />
         </div>
-        <img alt='song_img' src={images?.coverart} />
+        <img alt='song_img' src={images?.coverart} className='w-full h-full rounded-lg' />
       </div>
 
       <div className='mt-4 flex flex-col'>
