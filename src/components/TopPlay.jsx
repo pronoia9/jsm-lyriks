@@ -65,13 +65,13 @@ const TopPlay = () => {
           centeredSlidesBounds
           modules={[FreeMode]}
           className='mt-4'>
-          {topPlays?.map((artist) => (
+          {topPlays?.map((song) => (
             <SwiperSlide
-              key={artist?.key}
+              key={song?.key}
               style={{ width: '25%', height: 'auto' }}
               className='shadow-lg rounded-full animate-slideright'>
-              <Link to={`/artists/${artist?.artists[0].adamid}`}>
-                <img src={artist?.images?.background} alt='Name' className='rounded-full w-full object-cover' />
+              <Link to={`/artists/${song?.artists[0].adamid}`}>
+                <img src={song?.images?.background} alt='Name' className='rounded-full w-full object-cover' />
               </Link>
             </SwiperSlide>
           ))}
