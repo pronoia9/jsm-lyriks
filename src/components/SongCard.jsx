@@ -9,6 +9,9 @@ const SongCard = ({ song, i }) => {
   const { layout, type, title, key, subtitle, share, images, hub, artists, url, highlightsurls, properties } = song;
   const activeSong = null;
 
+  const handlePauseClick = () => {};
+  const handlePlayClick = () => {};
+
   return (
     <div className='flex flex-col w-[250px] p-4 bg-white/5 bg-opacity-80 backdrop-blur-sm animate-slideup rounded-lg cursor-pointer'>
       <div className='relative w-full h-56 group'>
@@ -17,7 +20,7 @@ const SongCard = ({ song, i }) => {
             activeSong && activeSong.title === title ? 'flex bg-black bg-opacity-70' : 'hidden'
           }`}>
           {/* Play/pause */}
-          <PlayPause />
+          <PlayPause song={song} handlePause={handlePauseClick} handlePlay={handlePlayClick} />
         </div>
         <img alt='song_img' src={images?.coverart} />
       </div>
