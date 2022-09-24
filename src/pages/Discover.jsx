@@ -19,8 +19,12 @@ const Discover = () => {
           ))}
         </select>
       </div>
-      
-      <div className='flex flex-wrap sm:justify-start justify-center gap-8'></div>
+
+      <div className='flex flex-wrap sm:justify-start justify-center gap-8'>
+        {Array.from({ length: 10 }, (val, i) => i).map((song, i) => 
+        <SongCard key={song} song={song} i={i} />
+        )}
+      </div>
     </div>
   );
 };
